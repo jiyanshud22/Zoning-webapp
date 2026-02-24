@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZoneIntel — v2</title>
+<title>Floor Zoning Intelligence — Scatter Graph & Zone Layout</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
-  
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap');
 
 :root {
@@ -286,13 +285,14 @@ header {
 <!-- UPLOAD -->
 <div id="upload-screen">
   <div>
-    <div class="upload-title">Floor Zoning Intelligence<br><em>Scatter Graph &amp; Zone Layout Engine</em></div>
+    <div class="upload-title">Floor Zoning Intelligence<br><em>Scatter Graph & Zone Layout Engine</em></div>
     <div class="upload-sub" style="margin-top:10px">
-      Upload your spatial JSON (floor plan) and Excel (block data) to run the zoning algorithm.
+      Upload your spatial JSON (floor plan) and Excel (block data) to run the automated 4-step zoning algorithm
+      aligned with the IITK playbook — scatter placement, zone splitting, geometric sizing, and boundary definition.
     </div>
   </div>
   <div class="upload-note">
-    <strong>Algorithm Steps:</strong><br>
+    <strong>Algorithm Steps (PDF-aligned):</strong><br>
     <strong>Step 1</strong> — Positioning: Scatter blocks on grid by proximity &amp; adjacency rules<br>
     <strong>Step 2</strong> — Zone Splitting: Split into sub-zones by superblock, area &amp; block count<br>
     <strong>Step 3</strong> — Geometric Sizing: Define X/Y dimensions, aspect ratios, fit to grid<br>
@@ -314,7 +314,7 @@ header {
       <div class="fname" id="excel-fname">Drop or click to upload</div>
     </div>
   </div>
-  <button class="process-btn" id="process-btn" disabled="" onclick="processFiles()">
+  <button class="process-btn" id="process-btn" disabled onclick="processFiles()">
     ⚡ Run Zoning Algorithm
   </button>
 </div>
@@ -1567,6 +1567,5 @@ function buildAnalysisPanel() {
   `;
 }
 </script>
-
-
-</body></html>
+</body>
+</html>
